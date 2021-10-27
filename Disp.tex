@@ -95,7 +95,7 @@
 % \newcommand{\md}{\mathrm{d}}
 % \newcommand{\mB}{\mathbf{B}}
 % \newcommand{\mO}{\mathcal{O}}
-% \newcommand{\mL}{\mathcal{L}}
+\newcommand{\mL}{\mathcal{L}}
 % \newcommand{\bm}[1]{\mbox{\boldmath{$#1$}}}
 
 \allowdisplaybreaks
@@ -119,8 +119,50 @@
  \renewcommand\contentsname{目录}
 \tableofcontents
 \newpage 
+本笔记基本参考\cite{oller2019brief}。
+\section{S矩阵及分波}
+用$| \boldmath{q},\sigma,m,s,\lambda\rangle$表示一个粒子态，粒子态的归一化如下
+\begin{align}
+   \langle \boldmath{q},\sigma,m,s,\lambda||\boldmath{q}^{\prime},\sigma^{\prime},m^{\prime},s^{\prime},\lambda^{\prime}\rangle=(2\pi)^3 2q^0 \delta^3(\boldmath{q}-\boldmath{q}^{\prime})\delta^{\sigma\sigma^{\prime}}\delta^{ss^{\prime}}\delta^{\lambda\lambda^{\prime}},
+\end{align}
+\subsection{S矩阵}
+在QFT中，从初态$|i\rangle$到末态的$|f\rangle$的几率由幺正矩阵S描述，S矩阵元定义为
+\begin{align}
+   S_{fi}=\langle f|S|i\rangle.
+\end{align}
+在相互作用表象中，可表示为
+\begin{align}
+   S_{fi}=\frac{\langle f |e^{\mbox{i}\int d^4x \mL_{int}} |i\rangle}{\langle 0|e^{\mbox{i}\int d^4 x \mL_{int}}|0\rangle}.
+\end{align}
 
-
+利用S矩阵定义T矩阵为
+\begin{align}
+   S=1+\mbox{i}T,
+\end{align}
+则由S矩阵的幺正性可得
+\begin{align}
+   T-T^{\dagger}=\mbox{i}TT^{\dagger},
+\end{align}
+两边夹上$\langle f|$和$|i\rangle$，以及在右手边插入单位矩阵，则可以得到
+\begin{align}
+   \begin{aligned}
+   \langle f|T|i\rangle - \langle f|T^{\dagger}|i\rangle  =
+      &\mbox{i}\sum \int \Big[
+      (2\pi)^4\delta(p_f-\sum_{i=1}^{n}q_i) \prod_{i=1}^n\frac{d^3q_i}{(2\pi)^3 2q_i^0}\Big]\\
+      &\times \langle f|T|\boldmath{q}_1,\sigma_1,m_1,s_1,\lambda_1;\cdots;\boldmath{q}_n,\sigma_n,m_n,s_n,\lambda_n\rangle\\
+      &\times\langle \boldmath{q}_1,\sigma_1,m_1,s_1,\lambda_1;\cdots;\boldmath{q}_n,\sigma_n,m_n,s_n,\lambda_n|T|i\rangle,
+   \end{aligned}
+\end{align}
+用$\int dQ$表示末态相空间积分
+\begin{align}
+   \int dQ=\int (2\pi)^4\delta(p_f-\sum_{i=1}^{n}q_i)\prod_{i=1}^{n}\frac{d^3q_i}{(2\pi)^3 2q_i^0},
+\end{align}
+在两体散射中，选取质心参考系，则散射截面为
+\begin{align}
+   \sigma_{fi}=\frac{1}{4|\boldmath{p}_1\sqrt{s}}\int dQ_f |\langle f|T||\boldmath{p}_1,\sigma_1,m_1,s_1,\lambda_1;|\boldmath{p}_2,\sigma_2,m_2,s_2,\lambda_2\rangle|^2,
+\end{align}
+\section{交叉对称及同位旋结构}
+考虑$\pi\pi$
 
     
 \newpage 
