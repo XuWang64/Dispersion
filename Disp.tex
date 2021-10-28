@@ -121,9 +121,9 @@
 \newpage 
 本笔记基本参考\cite{oller2019brief}。
 \section{S矩阵及分波}
-用$| \boldmath{q},\sigma,m,s,\lambda\rangle$表示一个粒子态，粒子态的归一化如下
+用$| \mathbf{q},\sigma,m,s,\lambda\rangle$表示一个粒子态，粒子态的归一化如下
 \begin{align}
-   \langle \boldmath{q},\sigma,m,s,\lambda||\boldmath{q}^{\prime},\sigma^{\prime},m^{\prime},s^{\prime},\lambda^{\prime}\rangle=(2\pi)^3 2q^0 \delta^3(\boldmath{q}-\boldmath{q}^{\prime})\delta^{\sigma\sigma^{\prime}}\delta^{ss^{\prime}}\delta^{\lambda\lambda^{\prime}},
+   \langle \mathbf{q},\sigma,m,s,\lambda||\mathbf{q}^{\prime},\sigma^{\prime},m^{\prime},s^{\prime},\lambda^{\prime}\rangle=(2\pi)^3 2q^0 \delta^3(\mathbf{q}-\mathbf{q}^{\prime})\delta^{\sigma\sigma^{\prime}}\delta^{ss^{\prime}}\delta^{\lambda\lambda^{\prime}},
 \end{align}
 \subsection{S矩阵}
 在QFT中，从初态$|i\rangle$到末态的$|f\rangle$的几率由幺正矩阵S描述，S矩阵元定义为
@@ -149,18 +149,61 @@
    \langle f|T|i\rangle - \langle f|T^{\dagger}|i\rangle  =
       &\mbox{i}\sum \int \Big[
       (2\pi)^4\delta(p_f-\sum_{i=1}^{n}q_i) \prod_{i=1}^n\frac{d^3q_i}{(2\pi)^3 2q_i^0}\Big]\\
-      &\times \langle f|T|\boldmath{q}_1,\sigma_1,m_1,s_1,\lambda_1;\cdots;\boldmath{q}_n,\sigma_n,m_n,s_n,\lambda_n\rangle\\
-      &\times\langle \boldmath{q}_1,\sigma_1,m_1,s_1,\lambda_1;\cdots;\boldmath{q}_n,\sigma_n,m_n,s_n,\lambda_n|T|i\rangle,
+      &\times \langle f|T|\mathbf{q}_1,\sigma_1,m_1,s_1,\lambda_1;\cdots;\mathbf{q}_n,\sigma_n,m_n,s_n,\lambda_n\rangle\\
+      &\times\langle \mathbf{q}_1,\sigma_1,m_1,s_1,\lambda_1;\cdots;\mathbf{q}_n,\sigma_n,m_n,s_n,\lambda_n|T|i\rangle,
    \end{aligned}
 \end{align}
 用$\int dQ$表示末态相空间积分
 \begin{align}
    \int dQ=\int (2\pi)^4\delta(p_f-\sum_{i=1}^{n}q_i)\prod_{i=1}^{n}\frac{d^3q_i}{(2\pi)^3 2q_i^0},
 \end{align}
+两体末态相空间在质心系中，
+\begin{align}
+   dQ=\int\frac{d^3p_1}{(2\pi)^3 2p_1^0}\frac{d^3p_2}{(2\pi)^3 2p_2^0}(2\pi)^4\delta(p_1+p_2)=\frac{|\mathbf{p}_1|d\Omega}{16\pi^2\sqrt{s}},
+\end{align}
 在两体散射中，选取质心参考系，则散射截面为
 \begin{align}
-   \sigma_{fi}=\frac{1}{4|\boldmath{p}_1\sqrt{s}}\int dQ_f |\langle f|T||\boldmath{p}_1,\sigma_1,m_1,s_1,\lambda_1;|\boldmath{p}_2,\sigma_2,m_2,s_2,\lambda_2\rangle|^2,
+   \sigma_{fi}=\frac{1}{4|\mathbf{p}_1\sqrt{s}}\int dQ_f |\langle f|T|\mathbf{p}_1,\sigma_1,m_1,s_1,\lambda_1;|\mathbf{p}_2,\sigma_2,m_2,s_2,\lambda_2\rangle|^2,
 \end{align}
+对于给定初态$|i\rangle$，则所有可能末态的散射截面为
+\begin{align}
+   \sigma_{i}=\frac{1}{4|\mathbf{p}_1|\sqrt{s}}\sum_{f}\int dQ_f |\langle f|T||\mathbf{p}_1,\sigma_1,m_1,s_1,\lambda_1;|\mathbf{p}_2,\sigma_2,m_2,s_2,\lambda_2\rangle|^2,
+\end{align}
+选取初态$|i\rangle$等于末态$|f\rangle$，则可以得到光学定理
+\begin{align}
+   \Im T_{ii}=\frac{1}{2}\sum_f\int dQ_f|T_{fi}|^2=2|\mathbf{p}_1|\sqrt{s}\sigma_i.
+\end{align}
+
+\subsection{分波}
+用$|\mathbf{p},\sigma_1\sigma_2\rangle$一个两粒子态，其中$\mathbf{p}$表示质心系中三动量，各自静止系中自旋第三分量表示为$\sigma_1,\sigma_2$的粒子，定义一个两体态$|lm,\sigma_1\sigma_2\rangle$
+\begin{align}
+   |lm,\sigma_1\sigma_2\rangle = \frac{1}{\sqrt{4\pi}}\int d \hat{\mathbf{p}} Y_l^m(\hat{\mathbf{p}})|\hat{\mathbf{p}},\sigma_1\sigma_2\rangle,
+\end{align}
+其中$l$为轨道角动量，$m$为其第三分量。
+
+旋转算符$R$作用在态$|\mathbf{p},\sigma_1\sigma_2\rangle$，结果为
+\begin{align}
+   R|\mathbf{p},\sigma_1 \sigma_2 \rangle = \sum_{\sigma_1^{\prime},\sigma_2^{\prime}} D^{(s_1)}(R)_{\sigma_1^{\prime}\sigma_1} D^{(s_2)}(R)_{\sigma_2^{\prime}\sigma_2} |\mathbf{p}^{\prime},\sigma_1^{\prime}\sigma_2^{\prime}\rangle,
+\end{align}
+则$R$作用在$|lm,\sigma_1\sigma_2\rangle$上，结果为
+\begin{align}
+   \begin{aligned}
+   R|lm,\sigma_1\sigma_2\rangle = &\sum_{\sigma_1^{\prime},\sigma_2^{\prime}} D^{(s_1)}(R)_{\sigma_1^{\prime}\sigma_1} D^{(s_2)}(R)_{\sigma_2^{\prime}\sigma_2} \frac{1}{\sqrt{4\pi}}\int d \hat{\mathbf{p}^{\prime}} Y_l^m(R^{-1}\hat{\mathbf{p}}^{\prime})|\hat{\mathbf{p}}^{\prime},\sigma_1^{\prime}\sigma_2^{\prime}\rangle\\
+   =&\sum_{\sigma_1^{\prime},\sigma_2^{\prime},m^{\prime}} D^{(l)}(R)_{mm^{\prime}} D^{(s_1)}(R)_{\sigma_1^{\prime}\sigma_1} D^{(s_2)}(R)_{\sigma_2^{\prime}\sigma_2} |lm^{\prime},\sigma_1^{\prime}\sigma_2^{\prime}\rangle.
+   \end{aligned}
+\end{align}
+
+首先考虑两粒子自旋耦合，再考虑总自旋和轨道角动量的耦合，利用CG系数将$|lm,\sigma_1\sigma_2\rangle$转换到$|J\mu,lS\rangle$基底，有
+\begin{align}
+   |J\mu,lS\rangle=\sum_{\sigma_1,\sigma_2,m,M}(\sigma_1\sigma_2M|s_1s_2S)(mM\mu|lSJ)|lm,\sigma_1\sigma_2\rangle,
+\end{align}
+其中$s_1,s_2$表示两粒子的自旋，$\sigma_1,\sigma_2$分别表示自旋的第三分量，$S$表示两粒子的总自旋，$M$表示总自旋的第三分量，$J$为总角动量，$\mu$为总角动量的第三分量。
+
+当考虑同位旋结构时，转换关系为
+\begin{align}
+   |J\mu,lS,It_3\rangle=\sum_{\sigma_1,\sigma_2,m,M,\alpha_1,\alpha_2}(\sigma_1\sigma_2M|s_1s_2S)(mM\mu|lSJ)(\alpha_1\alpha_2t_3|\tau_1\tau_2I)|\mathbf{p},\sigma_1\sigma_2,\alpha_1\alpha_2\rangle,
+\end{align}
+\section{Kallen-Lehmann表示}
 \section{交叉对称及同位旋结构}
 考虑$\pi\pi$
 
