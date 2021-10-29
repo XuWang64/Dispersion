@@ -140,7 +140,7 @@
    S=1+\mbox{i}T,
 \end{align}
 则由S矩阵的幺正性可得
-\begin{align}
+\begin{align}\label{tuni}
    T-T^{\dagger}=\mbox{i}TT^{\dagger},
 \end{align}
 两边夹上$\langle f|$和$|i\rangle$，以及在右手边插入单位矩阵，则可以得到
@@ -217,7 +217,7 @@
 
 考虑分波振幅，从$J\bar{l}\bar{S}I$跃迁到$JlSI$的几率由矩阵元$T^{(JI)}_{lS,\bar{l}\bar{S}}$给出
 \begin{align}
-   T^{(JI)}_{lS,\bar{l}\bar{S}}=\langle J\mu,lS,It_3|J\mu,\bar{l}\bar{S},It_3\rangle,
+   T^{(JI)}_{lS,\bar{l}\bar{S}}=\langle J\mu,lS,It_3|T|J\mu,\bar{l}\bar{S},It_3\rangle,
 \end{align}
 代入(\ref{pwatr})式，可得
 \begin{align}
@@ -232,16 +232,40 @@
    \sum_{M^{\prime}} (m_1^{\prime} m_2^{\prime} M^{\prime}|l_1 l_2 L) D^{(L)}_{M^{\prime}M}(R), 
 \end{align}
 可以将上式化为
+% \begin{align}
+%    \begin{aligned}
+%      并不能直接得到下面的公式，还需要一步\frac{1}{2J+1}\sum_
+%      {\mu=-J}^{J}，以及利用旋转矩阵的正交性才能得到。
+%    \end{aligned}
+% \end{align}
 \begin{align}
-   jjj
-   % \begin{aligned}
-   % T^{(JI)}_{lS,\bar{l}\bar{S}} = \frac{Y^0_{\bar{l}}(\hat{\mathbf{z}})}{2J+1} \sum_{
-   %    \begin{subarray}
-   %       \sigma_1,\sigma_2,\bar{\sigma}_1, \\
-   %       \bar{\sigma}_2,\alpha_1,\alpha_2, \\
-   %       \bar{\alpha}_1,\bar{\alpha}_2,m}
-   %    \end{subarray}
-   % \end{aligned}
+   \begin{aligned}
+   T^{(JI)}_{lS,\bar{l}\bar{S}} =& \frac{Y^0_{\bar{l}}(\hat{\mathbf{z}})}{2J+1} 
+   \sum_{\substack{
+         \sigma_1,\sigma_2,\bar{\sigma}_1, \\
+         \bar{\sigma}_2,\alpha_1,\alpha_2, \\
+         \bar{\alpha}_1,\bar{\alpha}_2,m}}\int d\hat{\mathbf{p}}^{\prime\prime} \langle \hat{\mathbf{p}}^{\prime\prime},\sigma_1\sigma_2,\alpha_1\alpha_2|T||\hat{\mathbf{p}}|\hat{\mathbf{z}},\bar{\sigma}_1\bar{\sigma}_2,\bar{\alpha}_1\bar{\alpha}_2\rangle \\
+         \times& Y_l^m(\hat{\mathbf{p}}^{\prime\prime})^* (\sigma_1\sigma_2M|s_1s_2S)(mM\bar{M}|lSJ)(\bar{\sigma}_1\bar{\sigma}_2\bar{M}|\bar{s}_1\bar{s}_2\bar{S}) \\
+         \times& (0\bar{M}\bar{M}|\bar{l}\bar{S}J)(\alpha_1\alpha_2t_3|\tau_1\tau_2I)(\bar{\alpha}_1\bar{\alpha}_2t_3|\bar{\tau}_1\bar{\tau}_2I).
+   \end{aligned}
+\end{align}
+
+\subsubsection{分波振幅的幺正性}
+由（\ref{tuni}）式可得，
+\begin{align}
+   2\Im T^{(JI)}_{lS,\bar{l}\bar{S}}=\langle J\mu,lS,It_3|TT^{\dagger}|J\mu,\bar{l}\bar{S},It_3\rangle,
+\end{align}
+在右边插入两体态的单位元，可得
+\begin{align}
+   \Im T^{(JI)}_{lS,\bar{l}\bar{S}}= \sum_{l^{\prime\prime,S^{\prime\prime}}}\frac{|\mathbf{p}^{\prime\prime}|}{8\pi\sqrt{s}}T^{(JI)}_{lS,l^{\prime}S^{\prime}} T^{(JI)^*}_{l^{\prime}S^{\prime},\bar{l}\bar{S}},
+\end{align}
+引入相空间因子算符
+\begin{align}
+   \rho_{ij}=\frac{|\mathbf{p}^{\prime}}{8\pi\sqrt{s}}\delta_{ij}
+\end{align}
+则有
+\begin{align}
+   T^{(JI)}-T^{\dagger(JI)}
 \end{align}
 \section{Kallen-Lehmann表示}
 该篇主要参考\cite{Zwicky:2016lka} \cite{2015量子场论导论}。

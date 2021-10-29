@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.6) (preloaded format=xelatex 2021.10.11)  29 OCT 2021 14:51
+This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.6) (preloaded format=xelatex 2021.10.11)  29 OCT 2021 17:18
 entering extended mode
 **./Disp.tex
 (Disp.tex
@@ -1239,23 +1239,23 @@ Package amsmath Warning: Foreign command \atop;
 [3] [4] [5]
 
 LaTeX Font Warning: Font shape `U/stmry/m/n' in size <10.53937> not available
-(Font)              size <10.95> substituted on input line 353.
+(Font)              size <10.95> substituted on input line 377.
 
-[6] (Disp.bbl) [7] (Disp.aux)
+[6] [7] (Disp.bbl) [8] (Disp.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.41063pt have occurred.
 
 Package rerunfilecheck Info: File `Disp.out' has not changed.
-(rerunfilecheck)             Checksum: C360AD745AD998B6538329F52A298611;491.
+(rerunfilecheck)             Checksum: 45EE68867EE6F0EB54B8826FF1819DD3;622.
  ) 
 Here is how much of TeX's memory you used:
- 30717 strings out of 411295
- 635774 string characters out of 2834900
- 988933 words of memory out of 3000000
- 50582 multiletter control sequences out of 15000+600000
- 414404 words of font info for 99 fonts, out of 8000000 for 9000
+ 30724 strings out of 411295
+ 635967 string characters out of 2834900
+ 990933 words of memory out of 3000000
+ 50587 multiletter control sequences out of 15000+600000
+ 414420 words of font info for 101 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 90i,18n,97p,673b,741s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 90i,21n,97p,673b,741s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on Disp.pdf (7 pages).
+Output written on Disp.pdf (8 pages).
