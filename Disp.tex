@@ -169,10 +169,11 @@
 \begin{align}
    \sigma_{i}=\frac{1}{4|\mathbf{p}_1|\sqrt{s}}\sum_{f}\int dQ_f |\langle f|T||\mathbf{p}_1,\sigma_1,m_1,s_1,\lambda_1;|\mathbf{p}_2,\sigma_2,m_2,s_2,\lambda_2\rangle|^2,
 \end{align}
-选取初态$|i\rangle$等于末态$|f\rangle$，则可以得到光学定理
+选取初态$|i\rangle$等于末态$|f\rangle$，则可以得到光学定理，
 \begin{align}
    \Im T_{ii}=\frac{1}{2}\sum_f\int dQ_f|T_{fi}|^2=2|\mathbf{p}_1|\sqrt{s}\sigma_i.
 \end{align}
+其中$\Im$表示取虚部。
 
 \subsection{分波}
 用$|\mathbf{p},\sigma_1\sigma_2\rangle$一个两粒子态，其中$\mathbf{p}$表示质心系中三动量，各自静止系中自旋第三分量表示为$\sigma_1,\sigma_2$的粒子，定义一个两体态$|lm,\sigma_1\sigma_2\rangle$
@@ -200,8 +201,47 @@
 其中$s_1,s_2$表示两粒子的自旋，$\sigma_1,\sigma_2$分别表示自旋的第三分量，$S$表示两粒子的总自旋，$M$表示总自旋的第三分量，$J$为总角动量，$\mu$为总角动量的第三分量。
 
 当考虑同位旋结构时，转换关系为
+\begin{align}\label{pwatr}
+   |J\mu,lS,It_3\rangle=\sum_{\sigma_1,\sigma_2,m,\atop M,\alpha_1,\alpha_2}(\sigma_1\sigma_2M|s_1s_2S)(mM\mu|lSJ)(\alpha_1\alpha_2t_3|\tau_1\tau_2I)|\mathbf{p},\sigma_1\sigma_2,\alpha_1\alpha_2\rangle.
+\end{align}
+
+由于两体末态相空间积分的结果，因此我们将两体态归一化为
 \begin{align}
-   |J\mu,lS,It_3\rangle=\sum_{\sigma_1,\sigma_2,m,M,\alpha_1,\alpha_2}(\sigma_1\sigma_2M|s_1s_2S)(mM\mu|lSJ)(\alpha_1\alpha_2t_3|\tau_1\tau_2I)|\mathbf{p},\sigma_1\sigma_2,\alpha_1\alpha_2\rangle,
+   \langle \mathbf{p}^{\prime},\sigma_1^{\prime}\sigma_2^{\prime},\alpha_1^{\prime}\alpha_2^{\prime}|\mathbf{p},\sigma_1\sigma_2,\alpha_1\alpha_2\rangle = \frac{16\pi^2\sqrt{s}}{|\mathbf{p}|} \delta(\hat{\mathbf{p}}^{\prime}-\hat{\mathbf{p}}),
+\end{align}
+忽略了离散指标。
+因此，$|J\mu,lS,It_3\rangle$态的归一化为
+\begin{align}
+   \langle J^{\prime}\mu^{\prime},l^{\prime}S^{\prime},I^{\prime}t_3^{\prime}|J\mu,lS,It_3\rangle = \frac{4\pi\sqrt{s}}{|\mathbf{p}|} \delta_{J^{\prime}J}\delta_{\mu^{\prime}\mu}\delta_{l^{\prime}l}\delta_{S^{\prime}S}\delta_{I^{\prime}I}\delta_{t_3^{\prime}t_3}.
+\end{align}
+
+考虑分波振幅，从$J\bar{l}\bar{S}I$跃迁到$JlSI$的几率由矩阵元$T^{(JI)}_{lS,\bar{l}\bar{S}}$给出
+\begin{align}
+   T^{(JI)}_{lS,\bar{l}\bar{S}}=\langle J\mu,lS,It_3|J\mu,\bar{l}\bar{S},It_3\rangle,
+\end{align}
+代入(\ref{pwatr})式，可得
+\begin{align}
+   \begin{aligned}
+      T^{(JI)}_{lS,\bar{l}\bar{S}}=& \frac{1}{4\pi}\sum\int d\hat{\mathbf{p}}^{\prime} \int d\hat{\mathbf{p}} Y_l^m(\hat{\mathbf{p}}^{\prime})^* Y_{\bar{l}}^{\bar{m}}(\hat{\mathbf{p}}) (\sigma_1\sigma_2M|s_1s_2S)(mM\mu|lSJ)(\alpha_1\alpha_2t_3|\tau_1\tau_2I)\\
+      \times& (\bar{\sigma}_1\bar{\sigma}_2\bar{M}|\bar{s}_1\bar{s}_2\bar{S})(\bar{m}\bar{M}\mu|\bar{l}\bar{S}J)(\bar{\alpha}_1\bar{\alpha}_2t_3|\bar{\tau}_1\bar{\tau}_2I) \langle \hat{\mathbf{p}}^{\prime},\sigma_1\sigma_2,\alpha_1\alpha_2|T|\mathbf{p},\bar{\sigma}_1\bar{\sigma}_2,\bar{\alpha}_1\bar{\alpha}_2 \rangle,
+   \end{aligned}
+\end{align}
+利用$T$矩阵的旋转不变性，以及$D_{m^{\prime}m}^{(l)}$的组合公式
+\begin{align}
+   \sum_{m_1,m_2} (m_1 m_2 M|l_1 l_2 L) D^{(l_1)}_{m^{\prime}_1 m_1}(R) D^{(l_2)}_{m^{\prime}_2 m_2}(R) = 
+   \sum_{M^{\prime}} (m_1^{\prime} m_2^{\prime} M^{\prime}|l_1 l_2 L) D^{(L)}_{M^{\prime}M}(R), 
+\end{align}
+可以将上式化为
+\begin{align}
+   jjj
+   % \begin{aligned}
+   % T^{(JI)}_{lS,\bar{l}\bar{S}} = \frac{Y^0_{\bar{l}}(\hat{\mathbf{z}})}{2J+1} \sum_{
+   %    \begin{subarray}
+   %       \sigma_1,\sigma_2,\bar{\sigma}_1, \\
+   %       \bar{\sigma}_2,\alpha_1,\alpha_2, \\
+   %       \bar{\alpha}_1,\bar{\alpha}_2,m}
+   %    \end{subarray}
+   % \end{aligned}
 \end{align}
 \section{Kallen-Lehmann表示}
 该篇主要参考\cite{Zwicky:2016lka} \cite{2015量子场论导论}。
