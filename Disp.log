@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.6) (preloaded format=xelatex 2021.10.11)  29 OCT 2021 17:18
+This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.6) (preloaded format=xelatex 2021.10.11)  1 NOV 2021 19:40
 entering extended mode
 **./Disp.tex
 (Disp.tex
@@ -1234,28 +1234,19 @@ LaTeX Font Info:    Font shape `TU/FandolSong-Regular(0)/m/sl' in size <10.5393
 
 Package amsmath Warning: Foreign command \atop;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 206.
+(amsmath)                 on input line 209.
 
-[3] [4] [5]
-
-LaTeX Font Warning: Font shape `U/stmry/m/n' in size <10.53937> not available
-(Font)              size <10.95> substituted on input line 377.
-
-[6] [7] (Disp.bbl) [8] (Disp.aux)
-
-LaTeX Font Warning: Size substitutions with differences
-(Font)              up to 0.41063pt have occurred.
-
+[3] [4] [5] [6] [7] (Disp.bbl) [8] (Disp.aux)
 Package rerunfilecheck Info: File `Disp.out' has not changed.
-(rerunfilecheck)             Checksum: 45EE68867EE6F0EB54B8826FF1819DD3;622.
+(rerunfilecheck)             Checksum: 6988DB7653E217E414ADEC864015C02E;946.
  ) 
 Here is how much of TeX's memory you used:
- 30724 strings out of 411295
- 635967 string characters out of 2834900
- 990933 words of memory out of 3000000
- 50587 multiletter control sequences out of 15000+600000
- 414420 words of font info for 101 fonts, out of 8000000 for 9000
+ 30673 strings out of 411295
+ 635946 string characters out of 2834900
+ 989933 words of memory out of 3000000
+ 50546 multiletter control sequences out of 15000+600000
+ 410937 words of font info for 82 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 90i,21n,97p,673b,741s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 90i,21n,97p,642b,362s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on Disp.pdf (8 pages).

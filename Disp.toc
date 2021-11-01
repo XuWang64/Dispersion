@@ -3,5 +3,8 @@
 \contentsline {subsection}{\numberline {1}S矩阵}{2}{subsection.1.1}%
 \contentsline {subsection}{\numberline {2}分波}{3}{subsection.1.2}%
 \contentsline {subsubsection}{\numberline {2.1}分波振幅的幺正性}{4}{subsubsection.1.2.1}%
-\contentsline {section}{\numberline {2}Kallen-Lehmann表示}{5}{section.2}%
-\contentsline {section}{\numberline {3}交叉对称及同位旋结构}{7}{section.3}%
+\contentsline {subsubsection}{\numberline {2.2}LS方程}{5}{subsubsection.1.2.2}%
+\contentsline {section}{\numberline {2}交叉对称及同位旋结构}{6}{section.2}%
+\contentsline {section}{\numberline {A}复数知识}{7}{appendix.A}%
+\contentsline {subsection}{\numberline {1}Schwarz反射定理}{7}{subsection.A.1}%
+\contentsline {subsection}{\numberline {2}Sugawara-Kanazawa定理}{7}{subsection.A.2}%
