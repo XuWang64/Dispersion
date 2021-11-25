@@ -1,9 +1,15 @@
 \begin{thebibliography}{1}
 
-\bibitem{oller2019brief}
-Jos{\'e}~Antonio Oller.
-\newblock {\em A Brief Introduction to Dispersion Relations: With Modern
-  Applications}.
-\newblock Springer, 2019.
+\bibitem{Zwicky:2016lka}
+Roman Zwicky.
+\newblock {A brief Introduction to Dispersion Relations and Analyticity}.
+\newblock In {\em {Quantum Field Theory at the Limits}: {from Strong Fields to
+  Heavy Quarks}}, 10 2016.
+
+\bibitem{roy1971exact}
+SM~Roy.
+\newblock Exact integral equation for pion-pion scattering involving only
+  physical region partial waves.
+\newblock {\em Physics Letters B}, 36(4):353--356, 1971.
 
 \end{thebibliography}
