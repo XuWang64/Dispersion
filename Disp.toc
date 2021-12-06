@@ -1,9 +1,4 @@
-<<<<<<< HEAD
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {1}色散关系}{2}{section.1}%
-\contentsline {section}{\numberline {2}Royal方程}{2}{section.2}%
-=======
-\babel@toc {english}{}
 \contentsline {section}{\numberline {1}S矩阵及分波}{2}{section.1}%
 \contentsline {subsection}{\numberline {1}S矩阵}{2}{subsection.1.1}%
 \contentsline {subsection}{\numberline {2}分波}{3}{subsection.1.2}%
@@ -13,4 +8,3 @@
 \contentsline {section}{\numberline {A}复数知识}{7}{appendix.A}%
 \contentsline {subsection}{\numberline {1}Schwarz反射定理}{7}{subsection.A.1}%
 \contentsline {subsection}{\numberline {2}Sugawara-Kanazawa定理}{7}{subsection.A.2}%
->>>>>>> refs/remotes/origin/master
